@@ -1,0 +1,52 @@
+CAN-Sentinel - Dataset Documentation
+
+1. Dataset Files
+
+Normal Dataset:
+datasets/normal/normal_dataset.csv
+
+Abnormal Dataset:
+datasets/abnormal/abnormal_dataset.csv
+
+
+2. CSV Columns
+
+timestamp:
+The time at which the CAN frame was captured.
+
+can_id:
+The CAN message identifier.
+
+dlc:
+Data Length Code. It indicates the number of data bytes in the CAN frame.
+
+payload:
+The actual CAN data bytes contained in the CAN frame.
+
+
+3. Dataset Description
+
+Normal Dataset:
+Contains CAN traffic representing normal/legitimate vehicle communication.
+
+Abnormal Dataset:
+Contains CAN traffic generated during abnormal/test conditions,
+such as repeated or flooded CAN messages.
+
+
+4. Data Format
+
+CSV format:
+
+timestamp,can_id,dlc,payload
+
+Example:
+
+1787467870.671253,101,4,00 00 00 64
+
+
+5. Purpose
+
+The datasets are prepared for the CAN-Sentinel detection module.
+The detection module can use the timestamp, CAN ID, timing/frequency,
+DLC and payload information to identify abnormal CAN traffic.
